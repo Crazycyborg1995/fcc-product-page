@@ -1,0 +1,141 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body{
+  height: 100vh;
+  font-family: 'Lato',Arial,sans-serif;
+}
+.nav-link{
+  text-decoration: none;
+  font-size: 1.05em;
+  padding: 1em 2em;
+  display: inline-block;
+  color: #004278;
+  font-weight: 700;
+}
+sub{
+  font-size: 30px;
+  vertical-align: text-bottom;
+}
+header{
+  margin : 0 5em;
+  height: 5em;
+  display: flex;
+  position: sticky;
+  top: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header-img{
+  width: 4em;
+  height: 4em;
+}
+#nav-bar{
+  margin-right:5em;
+}
+#nav-bar ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  height: calc(100vh - 180px);
+  justify-content: center;
+}
+.text-container{
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #363636;
+}
+.text-container h1{
+  font-size: 4em;
+  font-weight: bold;
+  color: #363636;
+}
+.text-container p{
+  font-size: 1.4em;
+}
+#form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+}
+#form label{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#form input[type="email"]{
+  background: #f3f3f3;
+  border: 3px solid #0072CE;
+  border-radius: 10px;
+  width: 50%;
+  padding: 1em;
+}
+#form > * {
+  display:block;
+  margin-bottom: 1em;
+}
+input::placeholder{
+  color:#ccc;
+}
+input[type="submit"]{
+  width: 20%;
+  border-radius: 50px;
+  padding: 1em;
+  background: #0072CE;
+  cursor: pointer;
+  background: linear-gradient(to right, #004278,#0072CE);
+  color: #fff;
+  border: 0;
+}
+input[type="submit"]:hover{
+  background:#cdd5db;
+}
+.bg-container{
+  background: url('../img/ps-vr.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.video-container{
+  height: 6.25em;
+  display: flex;
+  justify-content: space-between;
+}
+.triangle{
+  border-left: 50px solid #0072CE;
+	border-right: 50px solid transparent;
+	border-bottom: 50px solid #0072CE;   
+    border-top: 50px solid transparent;
+}
+.iframe-container{
+  box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.3),
+               0 5px 5px rgba(0, 0, 0, 0.3);
+  height: 5em;
+  align-self: flex-start;
+}
+
+@media (max-width:52em){
+  .grid-container{
+    grid-template-columns: 1fr;
+    min-height: 800px;
+
+  }
+  .bg-container{
+    min-height: 30em;
+  }
+  #nav-bar{
+    margin-right: 0;
+  }
+}
